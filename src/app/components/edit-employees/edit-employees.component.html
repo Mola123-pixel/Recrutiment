@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <h2>{{ header }}</h2>
+    <form ngSubmit="onSubmit(f)">
+        <div class="form-group">
+            <label for="Id">Id</label>
+            <input type="text" class="form-control" ngModel name="Id">
+        </div>
+        <div class="form-group">
+            <label for="Firstname">Firstname</label>
+            <input type="text" class="form-control" ngModel name="Firstname">
+        </div>
+        <div class="form-group">
+            <label for="Lastname">Lastname</label>
+            <input type="text" class="form-control" ngModel name="Lastname">
+        </div>
+        <div class="form-group">
+            <label for="Age">Age</label>
+            <input type="text" class="form-control" ngModel name="Age">
+        </div>
+        <div class="form-group">
+            <label for="Job_title">Job Title</label>
+            <input type="text" class="form-control" ngModel name="Job_title">
+        </div>
+        <div class="form-group">
+            <label for="Email_Address">Email Address</label>
+            <input type="text" class="form-control" ngModel name="Email_Address">
+        </div>
+        <div class="form-group mt-3">
+            <button type="submit" [routerLink]="['employee/Add, employee.id']">Save</button>
+            <button>Employees List</button>
+        </div>
+       
+    </form>
+    
+</div>
