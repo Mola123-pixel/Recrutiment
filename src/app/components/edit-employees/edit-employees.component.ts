@@ -17,12 +17,12 @@ export class EditEmployeesComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    //this.id = +this.route.snapshot.paramMap.get('id');
-    this.header = this.id===0? 'Add Employee' : 'Edit Employee';
+    //this.id = +this.route.snapshot.paramMap.get('Id');
+    this.header = this.id ===0? 'Add Employee' : 'Edit Employee';
   }
   
 
   onSubmit(form: NgForm){
-
+    console.log(form.value);
   }
 }
