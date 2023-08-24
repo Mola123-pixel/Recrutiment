@@ -38,9 +38,14 @@ export class EmployeesService {
     Job_title: "Soldier",
     Email_Address: "Lucky04@gmail.com"
   }
-  ];  //
+  ]; 
 
   constructor() { }
+  deleteEmployees(id: number){
+    let employees = this.employees.find(x=>x.Id === id);
+    let index = this.employees.indexOf(employees!,0)
+    this.employees.splice(index,1);
+  }
 
   getAllEmployees(){
     return this.employees;
@@ -48,4 +53,6 @@ export class EmployeesService {
   addEmployees(employees: Employees){
     return this.employees.push(employees);
   }
+
+ 
 }
