@@ -21,7 +21,7 @@
                 <td>{{Employees.Email_Address}}</td>
                 <td>
                     <a [routerLink]="['employee/Edit/', Employees.Id]" class="btn btn-primary-success">Edit</a>
-                    <a class="btn btn-primary-danger">Delete</a>
+                    <a (click)="deleteEmployees(Employees.Id)" class="btn btn-primary-danger">Delete</a>
                 </td>
             </tr>
 
