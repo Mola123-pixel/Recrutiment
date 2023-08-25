@@ -14,13 +14,24 @@ export class EditEmployeesComponent implements OnInit {
   id!: Number;
   header!: string;
 
-  constructor(private router: Router, private employeesService: EmployeesService, private route: ActivatedRoute) {
-   
+  //Populating the fields with the employees' information when editing
 
+  employees: Employees = {
+    Id: 0,
+    Firstname: "",
+    Lastname: "",
+    Age: 0,
+    Email_Address: "",
+    Job_title: ""
+  };
+
+  constructor(private router: Router, private employeesService: EmployeesService, private route: ActivatedRoute) {
   }
+ 
   ngOnInit(): void {
     //this.id = +this.route.snapshot.paramMap.get('Id');
     this.header = this.id ===0? 'Add Employee' : 'Edit Employee';
+    this.OnEdit();
   }
   
 
@@ -37,4 +48,12 @@ export class EditEmployeesComponent implements OnInit {
     this.employeesService.addEmployees(employees);
     this.router.navigateByUrl("");
   }
+
+  OnEdit(){
+    if(this.id != 0){
+      this.employeesService.OnEdit(this.id);
+
+    }
+  }
+
 }

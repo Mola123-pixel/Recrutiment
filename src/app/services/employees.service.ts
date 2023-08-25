@@ -41,17 +41,22 @@ export class EmployeesService {
   ]; 
 
   constructor() { }
-  deleteEmployees(id: number){
-    let employees = this.employees.find(x=>x.Id === id);
-    let index = this.employees.indexOf(employees!,0)
-    this.employees.splice(index,1);
-  }
 
   getAllEmployees(){
     return this.employees;
   }
   addEmployees(employees: Employees){
     return this.employees.push(employees);
+  }
+
+   deleteEmployees(id: Number){
+    let employees = this.employees.find(x=>x.Id === id);
+    let index = this.employees.indexOf(employees!,0)
+    this.employees.splice(index,1);
+  }
+
+  OnEdit(id : Number){
+    return this.employees.find(x=>x.Id === id);
   }
 
  

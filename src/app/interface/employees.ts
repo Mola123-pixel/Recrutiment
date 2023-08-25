@@ -3,7 +3,7 @@ export interface Employees {
 
     //Difference 
     //1. With classes we have to mention access identifier i.g public
-     Id: number;
+     Id: Number;
      Firstname: string;
      Lastname: string;
      Age: number;

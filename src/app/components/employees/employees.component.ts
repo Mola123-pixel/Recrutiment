@@ -19,7 +19,7 @@ export class EmployeesComponent implements OnInit {
    this.employees = this.EmployeesService.getAllEmployees();
   }
 
-  deleteEmployees(id: number){
+  deleteEmployees(id: Number){
    this.EmployeesService.deleteEmployees(id);
   }
  
