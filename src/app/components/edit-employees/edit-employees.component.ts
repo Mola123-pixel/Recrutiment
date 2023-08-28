@@ -29,9 +29,9 @@ export class EditEmployeesComponent implements OnInit {
   }
  
   ngOnInit(): void {
-    this.id? this.route.snapshot.paramMap.get('id') : "Unknown ID";
+    this.id? this.route.snapshot.paramMap.get('id'):"";
     this.header = this.id ===0? 'Add Employee' : 'Edit Employee';
-    this.OnEdit();
+    this.OnSave();
   }
   
 
@@ -49,7 +49,7 @@ export class EditEmployeesComponent implements OnInit {
     this.router.navigateByUrl("");
   }
 
-  OnEdit(){
+  OnSave(){
     if(this.id != 0){
       this.employeesService.OnEdit(this.id);
 
